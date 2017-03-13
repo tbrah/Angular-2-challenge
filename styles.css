@@ -93,6 +93,7 @@ button {
     width: 100%; }
   .container .header-wrapper {
     position: relative;
+    height: 25vh;
     width: 100%;
     background-color: #00A388; }
     .container .header-wrapper .overlay-img {
@@ -101,9 +102,9 @@ button {
       background-position: cover;
       background-position-y: -50px; }
     .container .header-wrapper .banner-area {
-      position: relative;
+      position: absolute;
       text-align: center;
-      top: 5%;
+      top: 6%;
       width: 100%;
       color: #FFF; }
       .container .header-wrapper .banner-area img {
