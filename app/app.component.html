@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="app-wrapper">
+    <my-header></my-header>
+    <hr class="shadow">
+      <div class="list-wrapper">
+        <div class="filter-wrapper">
+          <h4 (click)="setTab(1)" [class.tabActive]="tabAll">All</h4>
+          <h4 (click)="setTab(2)" [class.tabActive]="tabActive">Active</h4>
+          <h4 (click)="setTab(3)" [class.tabActive]="tabDone">Done</h4>
+          <input class="searchbar" placeholder="Search for specific tasks:" [(ngModel)]="listService.currentSearch">
+          <button class="undo-btn" type="button" (click)="undoBtn()"></button>
+          <div class="tooltip">Click this to undo deletes!</div>
+        </div>
+        <ul>
+          <list></list>
+        </ul>
+        <button class="circle-btn" type="button" (click)="addBtn()">+</button>
+
+        <popup></popup>
+
+      </div><!--list-wrapper-->
+  </div><!--app-wrapper-->
+</div>

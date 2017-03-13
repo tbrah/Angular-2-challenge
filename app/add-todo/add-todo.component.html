@@ -1,0 +1,5 @@
+<form (keyup.enter)="addItemBtn()">
+  <input type="text" [(ngModel)]="listText" required="" placeholder="Enter a todo here" autofocus [ngModelOptions]="{standalone:true}">
+  <button type="button" class="add-btn" (click)="addItemBtn()">Add</button>
+  <button type="button" class="close-btn" (click)="closeBtn()">x</button>
+</form>

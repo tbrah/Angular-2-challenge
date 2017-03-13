@@ -1,0 +1,7 @@
+<li *ngFor="let row of listService.list | filter:listService.currentSearch | tabFilter:listService.currentTab | orderById | orderByDone" class="done" [class.doneActive]="row.done">
+<input class="tickbox" type="checkbox" [(ngModel)]="row.done"><p>{{row.text}}</p>
+  <div class="list-btn-wrapper">
+    <button type="button"  class="edit" [class.doneiconedit-true]="row.done" (click)="editBtn(row)"></button>
+    <button type="button" class="delete" [class.doneicondelete-true]="row.done" (click)="deleteBtn(row)"></button>
+  </div>
+</li>

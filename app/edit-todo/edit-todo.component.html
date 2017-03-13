@@ -1,0 +1,4 @@
+<div class="editarea">
+  <textarea (keyup.enter)="closeBtn()" [(ngModel)]="popupService.current.text" autofocus></textarea>
+  <button type="button" class="add-btn" (click)="closeBtn()">Done</button>
+</div>

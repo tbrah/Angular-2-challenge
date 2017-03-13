@@ -1,0 +1,7 @@
+<div  class="popup" [class.popupActive]="popupService.togglePopUp" [ngSwitch]="popupService.switchContent">
+  <profile-popup *ngSwitchCase="'profile'"></profile-popup>
+  <div [class.popup-content]="popupService.toggleSpecialWrapper">
+    <add-todo-form *ngSwitchCase="'add'"></add-todo-form>
+    <edit-todo-form *ngSwitchCase="'edit'"></edit-todo-form>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="content-area">
+
+  <div class="close-btn" (click)="closeBtn()">X</div>
+
+  <div class="profile-img"><img src="./assets/images/profpic.jpg"></div>
+
+  <div class="info-wrapper">
+    <h1>John Doet</h1>
+    <h5>Front-end Developer</h5>
+  </div>
+
+  <div class="stat-wrapper">
+    <div class="row"><h4>Todo's added today:</h4><h4>{{listService.addedToday}}</h4></div>
+    <hr>
+    <div class="row">
+      <h4>Todo's completed today:</h4>
+      <h4 class="redtext" [class.greentext]="listService.countDone() > 0">{{listService.countDone()}}</h4>
+    </div>
+    <h5>Recently added:</h5>
+    <ul>
+      <li *ngFor="let item of listService.recentlyAdded">{{item.text}}</li>
+    </ul>
+  </div>
+
+
+</div>
